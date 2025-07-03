@@ -36,15 +36,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 80
----
-- apiVersion: route.openshift.io/v1
-  kind: Route
-  metadata:
-    name: nginx-route
-    namespace: koenig
-  spec:
-    to:
-      kind: Service
-      name: my-cip
-      weight: 100
-    wildcardPolicy: None
